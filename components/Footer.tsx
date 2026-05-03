@@ -48,7 +48,7 @@ export default function Footer() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: '#08090e', fontFamily: '"Syne", sans-serif' }}>
+    <footer className="relative overflow-hidden" style={{ background: '#08090e', fontFamily: 'var(--font-syne), sans-serif' }}>
 
       {/* Top accent line */}
       <div style={{ height: 1, background: 'linear-gradient(to right, transparent, rgba(236,233,76,0.35) 25%, rgba(236,233,76,0.35) 75%, transparent)' }} />

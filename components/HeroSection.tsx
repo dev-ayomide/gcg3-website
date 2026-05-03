@@ -227,7 +227,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-2">
             <span
               style={{
-                fontFamily: 'Outfit, sans-serif',
+                fontFamily: 'var(--font-outfit), sans-serif',
                 fontWeight: 700,
                 fontSize: 9,
                 letterSpacing: '0.22em',

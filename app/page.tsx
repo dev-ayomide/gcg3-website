@@ -448,7 +448,7 @@ export default async function HomePage() {
           aria-hidden
           style={{
             position: 'absolute',
-            fontFamily: '"Outfit", sans-serif',
+            fontFamily: 'var(--font-outfit), sans-serif',
             fontWeight: 800,
             fontSize: 'clamp(12rem, 28vw, 22rem)',
             color: 'rgba(34,43,100,0.04)',
@@ -574,7 +574,7 @@ export default async function HomePage() {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  fontFamily: '"Outfit", sans-serif',
+                  fontFamily: 'var(--font-outfit), sans-serif',
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: '0.22em',
@@ -593,7 +593,7 @@ export default async function HomePage() {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  fontFamily: '"Outfit", sans-serif',
+                  fontFamily: 'var(--font-outfit), sans-serif',
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: '0.22em',
