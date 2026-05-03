@@ -1,3 +1,6 @@
+/* ─── Fonts: Fraunces (display italic) · Outfit (heading/label) · DM Sans (body) ─── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,200;1,9..144,300;1,9..144,500;1,9..144,700;1,9..144,900&family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@400;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -114,10 +117,10 @@
   .btn-primary {
     @apply inline-flex items-center gap-2
            bg-accent text-bg font-label font-bold
-           px-8 py-4
+           px-6 py-3
            active:scale-[0.97]
            whitespace-nowrap select-none;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     position: relative;
@@ -147,10 +150,10 @@
   .btn-outline {
     @apply inline-flex items-center gap-2
            font-label font-bold text-accent
-           px-8 py-4
+           px-6 py-3
            active:scale-[0.97]
            whitespace-nowrap select-none;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     border: 1px solid rgba(236,233,76,0.35);
@@ -182,7 +185,7 @@
            font-label font-bold
            py-1
            transition-all duration-200;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: rgba(242,240,252,0.55);
@@ -233,7 +236,7 @@
   .eyebrow {
     @apply font-label font-bold;
     color: #ece94c;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.14em;
   }
@@ -308,7 +311,7 @@
   .eyebrow-dark {
     @apply font-label font-bold;
     color: #222b64;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.14em;
   }
@@ -317,10 +320,10 @@
   .btn-dark {
     @apply inline-flex items-center gap-2
            font-label font-bold
-           px-8 py-4
+           px-6 py-3
            active:scale-[0.97]
            whitespace-nowrap select-none;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     background: #0c0c14;
@@ -346,10 +349,10 @@
   .btn-outline-dark {
     @apply inline-flex items-center gap-2
            font-label font-bold
-           px-8 py-4
+           px-6 py-3
            active:scale-[0.97]
            whitespace-nowrap select-none;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #0c0c14;
@@ -440,7 +443,7 @@
     top: 22px;
     left: 22px;
     z-index: 3;
-    font-family: var(--font-outfit), sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 800;
     font-size: 10px;
     letter-spacing: 0.18em;
@@ -463,7 +466,7 @@
   }
 
   .prog-card-g-tag {
-    font-family: var(--font-outfit), sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 11px;
     letter-spacing: 0.18em;
@@ -473,11 +476,11 @@
   }
 
   .prog-card-g-title {
-    font-family: var(--font-fraunces), Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
     font-weight: 300;
     color: #f2f0fc;
-    font-size: 1.65rem;
+    font-size: 1.35rem;
     line-height: 1.1;
     letter-spacing: -0.02em;
     margin-bottom: 14px;
@@ -497,7 +500,7 @@
   .prog-card-g-desc {
     font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     color: rgba(157,164,204,0.92);
     line-height: 1.65;
     margin-bottom: 20px;
@@ -511,7 +514,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: var(--font-outfit), sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.16em;
@@ -547,7 +550,7 @@
       grid-column: 1;
       grid-row: 1 / 3;
     }
-    .prog-grid-flagship .prog-card-g-title { font-size: 2.15rem; }
+    .prog-grid-flagship .prog-card-g-title { font-size: 1.75rem; }
     .prog-grid-flagship .prog-card-g-desc {
       -webkit-line-clamp: 3;
       font-size: 16px;
@@ -564,7 +567,7 @@
       grid-column: 3;
       grid-row: 1 / 3;
     }
-    .prog-grid-d .prog-card-g-title { font-size: 1.95rem; }
+    .prog-grid-d .prog-card-g-title { font-size: 1.6rem; }
     .prog-grid-d .prog-card-g-desc { -webkit-line-clamp: 3; }
   }
 
@@ -576,12 +579,12 @@
     gap: 10px;
     background: #ece94c;
     color: #08090e;
-    font-family: var(--font-outfit), sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 18px 28px;
+    padding: 12px 20px;
     border-radius: 10px;
     text-decoration: none;
     transition: opacity 0.2s, transform 0.15s;

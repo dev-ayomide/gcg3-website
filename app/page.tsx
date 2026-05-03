@@ -44,7 +44,7 @@ export default async function HomePage() {
                 <div style={{ marginBottom: 40 }}>
                   <p
                     className="font-body"
-                    style={{ fontSize: 'clamp(1.125rem, 1.8vw, 1.25rem)', lineHeight: 1.85, color: '#3a3a5c', marginBottom: 20 }}
+                    style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', lineHeight: 1.85, color: '#3a3a5c', marginBottom: 20 }}
                   >
                     God&rsquo;s Children Got Great Gift is a divine project for the enhancement of the
                     kingdom of God. The main idea is to encourage children to fully utilize those
@@ -52,14 +52,14 @@ export default async function HomePage() {
                   </p>
                   <p
                     className="font-body"
-                    style={{ fontSize: 'clamp(1.125rem, 1.8vw, 1.25rem)', lineHeight: 1.85, color: '#3a3a5c', marginBottom: 20 }}
+                    style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', lineHeight: 1.85, color: '#3a3a5c', marginBottom: 20 }}
                   >
                     In accordance with Matthew 25:20, we believe strongly that every child has a variety
                     of talents in them. It is our utmost desire to bring life to those talents.
                   </p>
                   <p
                     className="font-body"
-                    style={{ fontSize: 'clamp(1.125rem, 1.8vw, 1.25rem)', lineHeight: 1.85, color: '#3a3a5c' }}
+                    style={{ fontSize: 'clamp(1rem, 1.5vw, 1.125rem)', lineHeight: 1.85, color: '#3a3a5c' }}
                   >
                     Apart from talent shows that occur annually, we also have programs that support
                     our children&rsquo;s holistic development — mentorship, leadership, and reading clubs.
@@ -87,7 +87,7 @@ export default async function HomePage() {
                     <div key={s.label}>
                       <p
                         className="font-display italic nums kern"
-                        style={{ fontSize: 'clamp(2.75rem, 4vw, 4rem)', lineHeight: 1, color: '#0d1240', letterSpacing: '-0.03em' }}
+                        style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', lineHeight: 1, color: '#0d1240', letterSpacing: '-0.03em' }}
                       >
                         {s.num}
                       </p>
@@ -181,6 +181,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 'clamp(40px, 6vw, 88px)', alignItems: 'center' }}>
 
             {/* Left: photo composition */}
+            <div className="order-last lg:order-first">
             <Fade y={48} delay={0.05}>
               <div style={{ position: 'relative', height: 520 }}>
                 <div
@@ -255,9 +256,10 @@ export default async function HomePage() {
                 </div>
               </div>
             </Fade>
+            </div>
 
             {/* Right: narrative */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+            <div className="order-first lg:order-last" style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
               <Fade>
                 <p className="eyebrow-dark">Our Story</p>
               </Fade>
@@ -266,7 +268,7 @@ export default async function HomePage() {
                 <h2
                   className="font-display italic kern text-balance"
                   style={{
-                    fontSize: 'clamp(2.75rem, 5vw, 4.5rem)',
+                    fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                     lineHeight: 0.96,
                     letterSpacing: '-0.025em',
                     color: '#0c0c14',
@@ -282,7 +284,7 @@ export default async function HomePage() {
               <Fade delay={0.2}>
                 <p
                   className="font-body font-light"
-                  style={{ fontSize: 18, color: '#6b6b8a', lineHeight: 1.85 }}
+                  style={{ fontSize: 16, color: '#6b6b8a', lineHeight: 1.85 }}
                 >
                   GCG3 was founded on one truth: every child carries
                   a God-given gift waiting to be discovered. We create a
@@ -314,7 +316,7 @@ export default async function HomePage() {
                       >
                         {v.dt}
                       </dt>
-                      <dd className="font-body" style={{ fontSize: 17, color: '#6b6b8a', lineHeight: 1.7 }}>
+                      <dd className="font-body" style={{ fontSize: 15, color: '#6b6b8a', lineHeight: 1.7 }}>
                         {v.dd}
                       </dd>
                     </div>
@@ -346,7 +348,7 @@ export default async function HomePage() {
                   <p className="eyebrow" style={{ marginBottom: 12 }}>What We Offer</p>
                   <h2
                     className="font-display italic kern"
-                    style={{ fontSize: 'clamp(2rem, 4.5vw, 3.75rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#f2f0fc', fontWeight: 300 }}
+                    style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#f2f0fc', fontWeight: 300 }}
                   >
                     Our Programs
                   </h2>
@@ -377,7 +379,7 @@ export default async function HomePage() {
                 <p className="eyebrow-dark" style={{ marginBottom: 12 }}>Our Community</p>
                 <h2
                   className="font-display italic kern"
-                  style={{ fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', lineHeight: 1.0, letterSpacing: '-0.02em', color: '#0c0c14', fontWeight: 300 }}
+                  style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', lineHeight: 1.0, letterSpacing: '-0.02em', color: '#0c0c14', fontWeight: 300 }}
                 >
                   Real Moments.<br />Real Impact.
                 </h2>
@@ -448,9 +450,9 @@ export default async function HomePage() {
           aria-hidden
           style={{
             position: 'absolute',
-            fontFamily: 'var(--font-outfit), sans-serif',
+            fontFamily: '"Outfit", sans-serif',
             fontWeight: 800,
-            fontSize: 'clamp(12rem, 28vw, 22rem)',
+            fontSize: 'clamp(8rem, 20vw, 14rem)',
             color: 'rgba(34,43,100,0.04)',
             top: -20, left: -10,
             letterSpacing: '-0.04em',
@@ -467,7 +469,7 @@ export default async function HomePage() {
                 <p className="eyebrow-dark" style={{ marginBottom: 12 }}>Live from GCG3</p>
                 <h2
                   className="font-display italic kern"
-                  style={{ fontSize: 'clamp(2rem, 4.5vw, 3.75rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#0c0c14', fontWeight: 300 }}
+                  style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#0c0c14', fontWeight: 300 }}
                 >
                   Upcoming Events
                 </h2>
@@ -497,7 +499,7 @@ export default async function HomePage() {
                 boxShadow: 'var(--shadow-sm)',
               }}
             >
-              <p className="font-display italic select-none" style={{ fontSize: '5rem', color: 'rgba(34,43,100,0.10)' }}>
+              <p className="font-display italic select-none" style={{ fontSize: '3.5rem', color: 'rgba(34,43,100,0.10)' }}>
                 GCG3
               </p>
               <p className="font-body" style={{ fontSize: 15, color: '#6b6b8a', marginTop: 12 }}>
@@ -521,7 +523,7 @@ export default async function HomePage() {
           className="font-display italic"
           style={{
             position: 'absolute',
-            fontSize: 'clamp(6rem, 18vw, 14rem)',
+            fontSize: 'clamp(4rem, 12vw, 8rem)',
             color: 'rgba(8,9,14,0.06)',
             top: '50%',
             left: '-2%',
@@ -557,7 +559,7 @@ export default async function HomePage() {
               <h2
                 className="font-display italic kern text-balance"
                 style={{
-                  fontSize: 'clamp(3.5rem, 8vw, 7rem)',
+                  fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
                   lineHeight: 0.92,
                   letterSpacing: '-0.035em',
                   color: '#08090e',
@@ -574,12 +576,12 @@ export default async function HomePage() {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  fontFamily: 'var(--font-outfit), sans-serif',
+                  fontFamily: '"Outfit", sans-serif',
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: '0.22em',
                   textTransform: 'uppercase',
-                  padding: '18px 36px',
+                  padding: '12px 24px',
                   background: '#08090e',
                   color: '#ece94c',
                   whiteSpace: 'nowrap',
@@ -593,12 +595,12 @@ export default async function HomePage() {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  fontFamily: 'var(--font-outfit), sans-serif',
+                  fontFamily: '"Outfit", sans-serif',
                   fontWeight: 700,
                   fontSize: 15,
                   letterSpacing: '0.22em',
                   textTransform: 'uppercase',
-                  padding: '18px 36px',
+                  padding: '12px 24px',
                   background: 'transparent',
                   color: '#08090e',
                   border: '1px solid rgba(8,9,14,0.28)',

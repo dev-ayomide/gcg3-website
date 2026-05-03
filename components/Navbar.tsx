@@ -51,7 +51,7 @@ export default function Navbar() {
           className="w-full flex items-center justify-between"
           style={{
             maxWidth:     scrolled ? '1100px' : '100%',
-            height:       scrolled ? '72px' : '100px',
+            height:       scrolled ? '60px' : '80px',
             paddingLeft:  scrolled ? '20px' : 'clamp(20px, 4vw, 56px)',
             paddingRight: scrolled ? '20px' : 'clamp(20px, 4vw, 56px)',
             borderRadius: scrolled ? '9999px' : '0',
@@ -79,7 +79,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0" aria-label="GCG3 Home">
-            <div className="relative flex-shrink-0" style={{ width: scrolled ? 64 : 96, height: scrolled ? 40 : 60, transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}` }}>
+            <div className="relative flex-shrink-0" style={{ width: scrolled ? 50 : 80, height: scrolled ? 32 : 50, transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}` }}>
               <Image src="https://gcg3official.com/wp-content/uploads/2021/04/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-cover" unoptimized />
             </div>
           </Link>
@@ -95,7 +95,7 @@ export default function Navbar() {
                   aria-current={active ? 'page' : undefined}
                   className="relative px-3 py-1.5 rounded-lg font-syne font-medium transition-colors duration-200"
                   style={{
-                    fontSize: 13,
+                    fontSize: 12,
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
                     color: active ? '#ece94c' : 'rgba(242,240,252,0.55)',
@@ -118,7 +118,7 @@ export default function Navbar() {
               href="/events"
               className="font-syne font-bold inline-flex items-center transition-all duration-300"
               style={{
-                fontSize: 12,
+                fontSize: 11,
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 padding: scrolled ? '7px 18px' : '9px 22px',
@@ -159,9 +159,9 @@ export default function Navbar() {
         }}
       >
         {/* Top bar */}
-        <div className="flex items-center justify-between px-5 flex-shrink-0" style={{ height: 72 }}>
+        <div className="flex items-center justify-between px-5 flex-shrink-0" style={{ height: 60 }}>
           <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <div className="relative w-28 h-18">
+            <div className="relative w-20 h-12">
               <Image src="https://gcg3official.com/wp-content/uploads/2021/04/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-cover" unoptimized />
             </div>
           </Link>
@@ -182,7 +182,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="font-display italic font-light text-text hover:text-accent transition-colors block"
                 style={{
-                  fontSize: 'clamp(2.5rem, 10vw, 3.75rem)',
+                  fontSize: 'clamp(2rem, 8vw, 3rem)',
                   lineHeight: 1.1,
                   color: active ? '#ece94c' : undefined,
                   opacity: menuOpen ? 1 : 0,
@@ -213,10 +213,10 @@ export default function Navbar() {
           className="px-8 pb-10 border-t"
           style={{ borderTopColor: 'rgba(242,240,252,0.06)', paddingTop: 20, opacity: menuOpen ? 1 : 0, transition: `opacity 0.45s ${EASING} 0.44s` }}
         >
-          <a href="mailto:gcg3official@gmail.com" className="font-syne text-muted hover:text-accent transition-colors block" style={{ fontSize: 13, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+          <a href="mailto:gcg3official@gmail.com" className="font-syne text-muted hover:text-accent transition-colors block" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
             gcg3official@gmail.com
           </a>
-          <a href="tel:4168584455" className="font-syne text-muted hover:text-accent transition-colors block mt-1.5" style={{ fontSize: 13, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+          <a href="tel:4168584455" className="font-syne text-muted hover:text-accent transition-colors block mt-1.5" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
             416-858-4455
           </a>
         </div>

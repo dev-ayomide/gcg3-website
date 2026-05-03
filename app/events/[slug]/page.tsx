@@ -137,7 +137,7 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                 >
                   {isPast ? 'Event Ended' : 'Upcoming Event'}
                 </span>
-                <h1 className="font-heading font-semibold" style={{ color: '#fff', fontSize: 'clamp(1.9rem,3.6vw,3.2rem)', lineHeight: 1.03, marginTop: 14 }}>
+                <h1 className="font-heading font-semibold" style={{ color: '#fff', fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)', lineHeight: 1.03, marginTop: 14 }}>
                   {titleText}
                 </h1>
               </div>
@@ -163,9 +163,9 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                       <span style={{ fontSize: 15, lineHeight: 1, color: '#fff', fontWeight: 600 }}>{dateParts.day}</span>
                     </div>
                     <div>
-                      <p style={{ color: '#fff', fontSize: 'clamp(1rem, 2.1vw, 1.4rem)', fontWeight: 600, lineHeight: 1.25 }}>{dateParts.line1}</p>
-                      {dateParts.line2 && <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 'clamp(0.85rem, 1.8vw, 1.15rem)', fontWeight: 600 }}>{dateParts.line2}</p>}
-                      {price && <p style={{ color: '#ece94c', fontSize: 20, fontWeight: 600, marginTop: 4 }}>{price}</p>}
+                      <p style={{ color: '#fff', fontSize: 'clamp(0.9rem, 1.5vw, 1.15rem)', fontWeight: 600, lineHeight: 1.25 }}>{dateParts.line1}</p>
+                      {dateParts.line2 && <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 'clamp(0.8rem, 1.5vw, 1rem)', fontWeight: 600 }}>{dateParts.line2}</p>}
+                      {price && <p style={{ color: '#ece94c', fontSize: 16, fontWeight: 600, marginTop: 4 }}>{price}</p>}
                     </div>
                   </div>
                 )}
@@ -191,7 +191,7 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                       </svg>
                     </div>
                     <div>
-                      <p style={{ color: '#fff', fontSize: 'clamp(0.95rem, 1.9vw, 1.3rem)', fontWeight: 600, lineHeight: 1.3 }}>{location}</p>
+                      <p style={{ color: '#fff', fontSize: 'clamp(0.85rem, 1.5vw, 1.1rem)', fontWeight: 600, lineHeight: 1.3 }}>{location}</p>
                     </div>
                   </div>
                 )}
@@ -207,21 +207,21 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                   marginBottom: 18,
                 }}
               >
-                <p className="font-heading" style={{ color: '#ece94c', fontSize: 16, fontWeight: 600, lineHeight: 1.4 }}>
+                <p className="font-heading" style={{ color: '#ece94c', fontSize: 14, fontWeight: 600, lineHeight: 1.4 }}>
                   Payment Option:
                 </p>
-                <p className="font-body" style={{ color: '#f2f0fc', fontSize: 15, lineHeight: 1.6 }}>
+                <p className="font-body" style={{ color: '#f2f0fc', fontSize: 14, lineHeight: 1.6 }}>
                   Please send an e-transfer to <strong>gcg3official@gmail.com</strong>. When sending the payment, include your child&apos;s name in the transfer notes.
                 </p>
               </section>
 
               {!isPast ? (
                 <section id="registration-form" style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.14)', background: 'rgba(255,255,255,0.05)' }}>
-                  <div style={{ padding: '10px 18px', borderBottom: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontWeight: 600, fontSize: 18 }}>
+                  <div style={{ padding: '10px 18px', borderBottom: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontWeight: 600, fontSize: 16 }}>
                     Registration
                   </div>
                   <div style={{ padding: '20px 18px', display: 'flex', flexDirection: 'column', gap: 16 }}>
-                    <p className="font-body" style={{ color: 'rgba(242,240,252,0.72)', fontSize: 15, lineHeight: 1.65 }}>
+                    <p className="font-body" style={{ color: 'rgba(242,240,252,0.72)', fontSize: 14, lineHeight: 1.65 }}>
                       Click the button below to complete your registration on the GCG3 registration page.
                     </p>
 
@@ -256,7 +256,7 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                         <line x1="12" y1="16" x2="12.01" y2="16"/>
                       </svg>
                       <p className="font-body" style={{ color: 'rgba(242,240,252,0.65)', fontSize: 14, lineHeight: 1.6 }}>
-                        Opens in a new tab. After registering, send your e-transfer to <strong style={{ color: '#ece94c' }}>gcg3official@gmail.com</strong> and include your child&apos;s name in the notes.
+                       After registering, send your e-transfer to <strong style={{ color: '#ece94c' }}>gcg3official@gmail.com</strong> and include your child&apos;s name in the notes.
                       </p>
                     </div>
                   </div>

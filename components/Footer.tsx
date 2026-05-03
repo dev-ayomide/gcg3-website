@@ -48,7 +48,7 @@ export default function Footer() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: '#08090e', fontFamily: 'var(--font-syne), sans-serif' }}>
+    <footer className="relative overflow-hidden" style={{ background: '#08090e', fontFamily: '"Syne", sans-serif' }}>
 
       {/* Top accent line */}
       <div style={{ height: 1, background: 'linear-gradient(to right, transparent, rgba(236,233,76,0.35) 25%, rgba(236,233,76,0.35) 75%, transparent)' }} />
@@ -66,7 +66,7 @@ export default function Footer() {
         className="pointer-events-none select-none absolute left-1/2 -translate-x-1/2 font-syne font-bold uppercase"
         style={{
           bottom: '-0.12em',
-          fontSize: 'clamp(88px, 22vw, 260px)',
+          fontSize: 'clamp(48px, 15vw, 160px)',
           lineHeight: 1,
           letterSpacing: '-0.04em',
           color: 'rgba(242,240,252,0.04)',
@@ -88,7 +88,7 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-3 mb-10 group w-fit">
-              <div className="relative w-40 h-24 flex-shrink-0">
+              <div className="relative w-24 h-16 flex-shrink-0">
                 <Image
                   src="https://gcg3official.com/wp-content/uploads/2021/04/GCG3-New-Site-Logo.gif"
                   alt="GCG3"
@@ -102,14 +102,14 @@ export default function Footer() {
             {/* Headline */}
             <h2
               className="font-syne font-bold text-text leading-tight"
-              style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', marginBottom: 16 }}
+              style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', marginBottom: 16 }}
             >
               Stay in{' '}
               <em className="not-italic" style={{ color: '#ece94c' }}>faith.</em>
             </h2>
             <p
               className="font-body leading-relaxed"
-              style={{ fontSize: 15, color: 'rgba(242,240,252,0.50)', maxWidth: '34ch', marginBottom: 36 }}
+              style={{ fontSize: 14, color: 'rgba(242,240,252,0.50)', maxWidth: '34ch', marginBottom: 36 }}
             >
               News, events &amp; inspiration for the GCG3 community — delivered to your inbox.
             </p>
@@ -145,7 +145,7 @@ export default function Footer() {
                   type="submit"
                   aria-label="Subscribe"
                   className="flex-shrink-0 font-syne font-bold text-muted hover:text-accent transition-colors"
-                  style={{ fontSize: 18, lineHeight: 1 }}
+                  style={{ fontSize: 16, lineHeight: 1 }}
                 >
                   →
                 </button>
@@ -190,7 +190,7 @@ export default function Footer() {
                       <Link
                         href={link.href}
                         className="font-body transition-colors"
-                        style={{ fontSize: 15, color: 'rgba(242,240,252,0.50)', lineHeight: 1.4 }}
+                        style={{ fontSize: 14, color: 'rgba(242,240,252,0.50)', lineHeight: 1.4 }}
                         onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(242,240,252,0.90)'; }}
                         onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(242,240,252,0.50)'; }}
                       >

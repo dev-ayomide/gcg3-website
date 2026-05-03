@@ -64,7 +64,7 @@ export default async function EventsPage() {
                         src={img}
                         alt={featured.title.rendered.replace(/<[^>]+>/g, '')}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="(max-width: 1024px) 100vw, 55vw"
                         priority
                       />
@@ -79,7 +79,7 @@ export default async function EventsPage() {
                     <p className="font-label font-bold" style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#6b6b8a', marginBottom: 10 }}>
                       Featured Event
                     </p>
-                    <h2 className="font-heading font-bold" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: '#0c0c14', lineHeight: 1.1, marginBottom: 18 }} dangerouslySetInnerHTML={{ __html: featured.title.rendered }} />
+                    <h2 className="font-heading font-bold" style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)', color: '#0c0c14', lineHeight: 1.1, marginBottom: 18 }} dangerouslySetInnerHTML={{ __html: featured.title.rendered }} />
                     <div style={{ display: 'grid', gap: 8, marginBottom: 24 }}>
                       {date && <p className="font-body" style={{ color: '#3a3a5c', fontSize: 16 }}>{date}</p>}
                       {location && <p className="font-body" style={{ color: '#3a3a5c', fontSize: 16 }}>{location}</p>}

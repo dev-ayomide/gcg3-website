@@ -55,7 +55,7 @@ export default function AboutPage() {
             <h1
               className="font-display italic font-light text-text kern"
               style={{
-                fontSize: 'clamp(64px, 11vw, 140px)',
+                fontSize: 'clamp(48px, 8vw, 100px)',
                 lineHeight: 0.93,
                 letterSpacing: '-0.03em',
                 maxWidth: '16ch',
@@ -68,7 +68,7 @@ export default function AboutPage() {
           <Fade delay={0.35}>
             <p
               className="font-body font-light"
-              style={{ fontSize: 'clamp(18px, 1.8vw, 22px)', lineHeight: 1.75, color: '#8e95c8', maxWidth: '44ch' }}
+              style={{ fontSize: 'clamp(16px, 1.5vw, 20px)', lineHeight: 1.75, color: '#8e95c8', maxWidth: '44ch' }}
             >
               God&apos;s Children Got Great Gifts — a community built on faith, talent, and love for every young heart.
             </p>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 >
                   Why We Exist
                 </h2>
-                <p className="font-body" style={{ fontSize: 18, lineHeight: 1.85, color: '#6b6b8a' }}>
+                <p className="font-body" style={{ fontSize: 16, lineHeight: 1.85, color: '#6b6b8a' }}>
                   To create a platform where young children can fully express their individual talents —
                   because every child carries something God placed inside them that the world needs to see.
                 </p>
@@ -126,7 +126,7 @@ export default function AboutPage() {
                 >
                   Where We&apos;re Going
                 </h2>
-                <p className="font-body" style={{ fontSize: 18, lineHeight: 1.85, color: '#6b6b8a' }}>
+                <p className="font-body" style={{ fontSize: 16, lineHeight: 1.85, color: '#6b6b8a' }}>
                   To showcase the talents God has deposited in young children — building a generation
                   that knows who they are, whose they are, and what they carry.
                 </p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
           style={{
             position: 'absolute', top: '50%', left: '-2%',
             transform: 'translateY(-50%)',
-            fontSize: 'clamp(8rem, 20vw, 16rem)',
+            fontSize: 'clamp(6rem, 15vw, 12rem)',
             color: 'rgba(8,9,14,0.05)',
             lineHeight: 0.85,
             letterSpacing: '-0.03em',
@@ -158,7 +158,7 @@ export default function AboutPage() {
           <blockquote
             className="font-display italic font-light kern"
             style={{
-              fontSize: 'clamp(1.6rem, 3.2vw, 2.4rem)',
+              fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)',
               lineHeight: 1.5,
               color: '#0c0c14',
               maxWidth: '30ch',
@@ -192,7 +192,7 @@ export default function AboutPage() {
               </p>
               <h2
                 className="font-display italic font-light kern"
-                style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#0c0c14' }}
+                style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#0c0c14' }}
               >
                 Our Objectives
               </h2>
@@ -223,7 +223,7 @@ export default function AboutPage() {
                 <div
                   className="font-display italic"
                   style={{
-                    fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                    fontSize: 'clamp(2rem, 4vw, 3.5rem)',
                     lineHeight: 1,
                     color: 'rgba(34,43,100,0.15)',
                     letterSpacing: '-0.04em',
@@ -236,14 +236,14 @@ export default function AboutPage() {
                 {/* Title */}
                 <h3
                   className="font-heading font-bold"
-                  style={{ fontSize: 'clamp(1.4rem, 2.2vw, 1.8rem)', color: '#0c0c14', lineHeight: 1.2, paddingTop: 6 }}
+                  style={{ fontSize: 'clamp(1.25rem, 1.8vw, 1.5rem)', color: '#0c0c14', lineHeight: 1.2, paddingTop: 6 }}
                 >
                   {obj.title}
                 </h3>
                 {/* Description */}
                 <p
                   className="font-body"
-                  style={{ fontSize: 18, lineHeight: 1.85, color: '#6b6b8a' }}
+                  style={{ fontSize: 16, lineHeight: 1.85, color: '#6b6b8a' }}
                 >
                   {obj.description}
                 </p>
@@ -268,7 +268,7 @@ export default function AboutPage() {
               </p>
               <h2
                 className="font-display italic font-light kern"
-                style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#0c0c14' }}
+                style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: 0.96, letterSpacing: '-0.025em', color: '#0c0c14' }}
               >
                 Core Values
               </h2>
@@ -299,14 +299,14 @@ export default function AboutPage() {
                 {/* Label */}
                 <h3
                   className="font-heading font-bold"
-                  style={{ fontSize: 'clamp(1.4rem, 2.2vw, 1.8rem)', color: '#0c0c14', letterSpacing: '-0.01em' }}
+                  style={{ fontSize: 'clamp(1.25rem, 1.8vw, 1.5rem)', color: '#0c0c14', letterSpacing: '-0.01em' }}
                 >
                   {val.label}
                 </h3>
                 {/* Description */}
                 <p
                   className="font-body"
-                  style={{ fontSize: 18, lineHeight: 1.8, color: '#6b6b8a' }}
+                  style={{ fontSize: 16, lineHeight: 1.8, color: '#6b6b8a' }}
                 >
                   {val.description}
                 </p>
@@ -333,7 +333,7 @@ export default function AboutPage() {
               </p>
               <h2
                 className="font-display italic font-light text-text kern"
-                style={{ fontSize: 'clamp(2.75rem, 6vw, 4.5rem)', lineHeight: 0.96, letterSpacing: '-0.03em' }}
+                style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: 0.96, letterSpacing: '-0.03em' }}
               >
                 Ready to participate?
               </h2>

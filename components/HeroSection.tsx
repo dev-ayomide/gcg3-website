@@ -131,14 +131,14 @@ export default function HeroSection() {
           className="eyebrow animate-fade-in"
           style={{ animationDelay: '0.15s', marginBottom: 28 }}
         >
-          Matthew 25 · Est. 2021 · Ontario, Canada
+          {/* Matthew 25 · Est. 2021 · Ontario, Canada */}
         </p>
 
         {/* ── HEADLINE — Fraunces italic, viewport-filling ── */}
         <h1
           className="font-display italic font-light text-text text-balance kern"
           style={{
-            fontSize: 'clamp(64px, 11vw, 160px)',
+            fontSize: 'clamp(48px, 8vw, 110px)',
             lineHeight: 0.93,
             letterSpacing: '-0.03em',
             maxWidth: '14ch',
@@ -184,7 +184,7 @@ export default function HeroSection() {
         <p
           className="font-body font-light animate-fade-in"
           style={{
-            fontSize: 'clamp(18px, 1.8vw, 22px)',
+            fontSize: 'clamp(16px, 1.5vw, 20px)',
             lineHeight: 1.75,
             color: '#8e95c8',
             maxWidth: '38ch',
@@ -227,7 +227,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-2">
             <span
               style={{
-                fontFamily: 'var(--font-outfit), sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontWeight: 700,
                 fontSize: 9,
                 letterSpacing: '0.22em',

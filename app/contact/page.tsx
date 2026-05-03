@@ -45,7 +45,7 @@ export default function ContactPage() {
           <h1
             className="font-display italic font-light text-text kern"
             style={{
-              fontSize: 'clamp(52px, 8vw, 110px)',
+              fontSize: 'clamp(40px, 6vw, 80px)',
               lineHeight: 0.95,
               letterSpacing: '-0.03em',
               maxWidth: '16ch',
@@ -56,7 +56,7 @@ export default function ContactPage() {
           </h1>
           <p
             className="font-body font-light"
-            style={{ fontSize: 'clamp(18px, 1.8vw, 22px)', lineHeight: 1.75, color: '#8e95c8', maxWidth: '44ch' }}
+            style={{ fontSize: 'clamp(14px, 1.5vw, 16px)', lineHeight: 1.75, color: '#8e95c8', maxWidth: '44ch' }}
           >
             We&apos;d love to hear from you — reach out any time.
           </p>
@@ -79,11 +79,11 @@ export default function ContactPage() {
                 <div>
                   <p
                     className="font-label font-bold uppercase"
-                    style={{ fontSize: 16, letterSpacing: '0.22em', color: '#222b64', marginBottom: 6 }}
+                    style={{ fontSize: 14, letterSpacing: '0.22em', color: '#222b64', marginBottom: 6 }}
                   >
                     {card.title}
                   </p>
-                  <p className="font-body" style={{ fontSize: 18, color: '#6b6b8a', lineHeight: 1.65 }}>
+                  <p className="font-body" style={{ fontSize: 15, color: '#6b6b8a', lineHeight: 1.65 }}>
                     {card.value}
                   </p>
                 </div>
@@ -108,10 +108,10 @@ export default function ContactPage() {
             style={{ padding: '20px 24px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}
           >
             <div>
-              <p className="font-heading font-bold" style={{ fontSize: 18, color: '#0c0c14', marginBottom: 2 }}>
+              <p className="font-heading font-bold" style={{ fontSize: 16, color: '#0c0c14', marginBottom: 2 }}>
                 Office Hours
               </p>
-              <p className="font-body" style={{ fontSize: 17, color: '#6b6b8a' }}>
+              <p className="font-body" style={{ fontSize: 15, color: '#6b6b8a' }}>
                 Monday – Friday: 9:00 AM – 6:00 PM &nbsp;·&nbsp; Saturday – Sunday: Closed
               </p>
             </div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
         <div className="max-w-[1760px] mx-auto px-5 md:px-10 lg:px-16">
           <p
             className="font-label font-bold uppercase"
-            style={{ fontSize: 16, letterSpacing: '0.22em', color: '#222b64', marginBottom: 24 }}
+            style={{ fontSize: 14, letterSpacing: '0.22em', color: '#222b64', marginBottom: 24 }}
           >
             Find Us
           </p>
@@ -155,13 +155,13 @@ export default function ContactPage() {
         <div className="max-w-[1760px] mx-auto px-5 md:px-10 lg:px-16">
           <p
             className="font-label font-bold uppercase"
-            style={{ fontSize: 16, letterSpacing: '0.22em', color: '#222b64', marginBottom: 16 }}
+            style={{ fontSize: 14, letterSpacing: '0.22em', color: '#222b64', marginBottom: 16 }}
           >
             Send a Message
           </p>
           <h2
             className="font-heading font-bold"
-            style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', color: '#0c0c14', marginBottom: 32 }}
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: '#0c0c14', marginBottom: 32 }}
           >
             Get In Touch
           </h2>

@@ -72,7 +72,7 @@ export default function EventCard({ event, variant = 'light' }: EventCardProps) 
             <span
               className="font-display italic select-none"
               style={{
-                fontSize: 52,
+                fontSize: 40,
                 color: isLight ? 'rgba(34,43,100,0.10)' : 'rgba(236,233,76,0.07)',
                 letterSpacing: '-0.02em',
               }}
@@ -87,7 +87,7 @@ export default function EventCard({ event, variant = 'light' }: EventCardProps) 
           <span
             className="absolute top-3 left-3 font-label font-bold"
             style={{
-              fontSize: 15,
+              fontSize: 14,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               padding: '5px 13px',
@@ -115,7 +115,7 @@ export default function EventCard({ event, variant = 'light' }: EventCardProps) 
         <h3
           className="font-heading font-semibold line-clamp-2"
           style={{
-            fontSize: 17,
+            fontSize: 15,
             lineHeight: 1.3,
             letterSpacing: '-0.01em',
             color:       isLight ? '#0c0c14' : '#f2f0fc',

@@ -74,7 +74,7 @@ export default function ProgramsPage() {
           <h1
             className="font-display italic font-light text-text kern"
             style={{
-              fontSize: 'clamp(44px, 8vw, 96px)',
+              fontSize: 'clamp(36px, 6vw, 72px)',
               lineHeight: 0.95,
               letterSpacing: '-0.03em',
               maxWidth: '18ch',
@@ -85,7 +85,7 @@ export default function ProgramsPage() {
           </h1>
           <p
             className="font-body font-light"
-            style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', lineHeight: 1.75, color: '#8e95c8', maxWidth: '44ch' }}
+            style={{ fontSize: 'clamp(14px, 1.2vw, 16px)', lineHeight: 1.75, color: '#8e95c8', maxWidth: '44ch' }}
           >
             Purposeful programs designed to help children grow in faith, talent, and community.
           </p>
@@ -166,14 +166,14 @@ export default function ProgramsPage() {
 
                 <h2
                   className="font-display italic font-light kern"
-                  style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: '#0c0c14', marginBottom: 14 }}
+                  style={{ fontSize: 'clamp(1.75rem, 3vw, 2.25rem)', lineHeight: 1.05, letterSpacing: '-0.02em', color: '#0c0c14', marginBottom: 14 }}
                 >
                   {prog.title}
                 </h2>
 
                 <p
                   className="font-body"
-                  style={{ fontSize: 17, lineHeight: 1.85, color: '#6b6b8a', marginBottom: 24, maxWidth: '52ch' }}
+                  style={{ fontSize: 15, lineHeight: 1.85, color: '#6b6b8a', marginBottom: 24, maxWidth: '52ch' }}
                 >
                   {prog.description}
                 </p>
@@ -216,13 +216,13 @@ export default function ProgramsPage() {
         <div className="max-w-2xl mx-auto px-5 md:px-10">
           <h2
             className="font-display italic font-light text-text"
-            style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 16 }}
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 16 }}
           >
             Ready to participate?
           </h2>
           <p
             className="font-body font-light"
-            style={{ fontSize: 16, lineHeight: 1.75, color: '#8e95c8', marginBottom: 40 }}
+            style={{ fontSize: 15, lineHeight: 1.75, color: '#8e95c8', marginBottom: 40 }}
           >
             Register for an upcoming event or reach out to learn more.
           </p>

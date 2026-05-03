@@ -50,11 +50,11 @@ const config: Config = {
         'ink-muted': '#6b6b8a', // body on white — indigo tint
       },
       fontFamily: {
-        display: ['var(--font-fraunces)', 'Georgia', 'serif'],
-        heading: ['var(--font-outfit)', 'sans-serif'],
-        label:   ['var(--font-outfit)', 'sans-serif'],
-        body:    ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
-        syne:    ['var(--font-syne)', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        heading: ['"Outfit"', 'sans-serif'],
+        label:   ['"Outfit"', 'sans-serif'],
+        body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+        syne:    ['"Syne"', 'sans-serif'],
       },
       transitionTimingFunction: {
         'expo-out': 'cubic-bezier(0.16, 1, 0.3, 1)',
