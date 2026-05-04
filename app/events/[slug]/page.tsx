@@ -8,6 +8,7 @@ import {
   isDateTextPast,
   isEventPast,
 } from '@/lib/wordpress';
+import EventRegistrationForm from '@/components/EventRegistrationForm';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -221,24 +222,6 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                     Registration
                   </div>
                   <div style={{ padding: '20px 18px', display: 'flex', flexDirection: 'column', gap: 16 }}>
-                    <p className="font-body" style={{ color: 'rgba(242,240,252,0.72)', fontSize: 14, lineHeight: 1.65 }}>
-                      Click the button below to complete your registration on the GCG3 registration page.
-                    </p>
-
-                    <a
-                      href={event.acf?.registration_link || event.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="reg-cta-btn"
-                    >
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" strokeWidth="2.5" stroke="currentColor">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                        <polyline points="15 3 21 3 21 9"/>
-                        <line x1="10" y1="14" x2="21" y2="3"/>
-                      </svg>
-                      Register Now →
-                    </a>
-
                     <div
                       style={{
                         borderRadius: 8,
@@ -256,9 +239,10 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                         <line x1="12" y1="16" x2="12.01" y2="16"/>
                       </svg>
                       <p className="font-body" style={{ color: 'rgba(242,240,252,0.65)', fontSize: 14, lineHeight: 1.6 }}>
-                       After registering, send your e-transfer to <strong style={{ color: '#ece94c' }}>gcg3official@gmail.com</strong> and include your child&apos;s name in the notes.
+                        After submitting, send your e-transfer to <strong style={{ color: '#ece94c' }}>gcg3official@gmail.com</strong> and include your child&apos;s name in the notes.
                       </p>
                     </div>
+                    <EventRegistrationForm eventName={titleText} />
                   </div>
                 </section>
               ) : (

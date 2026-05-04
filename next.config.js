@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'gcg3official.com',
         pathname: '/wp-content/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cms.gcg3official.com',
+        pathname: '/wp-content/**',
+      },
     ],
   },
 };

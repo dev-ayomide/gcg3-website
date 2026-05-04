@@ -1,3 +1,5 @@
+import ContactForm from '@/components/ContactForm';
+
 export const metadata = {
   title: 'Contact — GCG3',
   description: "Get in touch with GCG3. We'd love to hear from you.",
@@ -165,22 +167,7 @@ export default function ContactPage() {
           >
             Get In Touch
           </h2>
-          <div
-            style={{
-              borderRadius: 12,
-              overflow: 'hidden',
-              border: '1px solid rgba(12,12,20,0.07)',
-              boxShadow: 'var(--shadow-sm)',
-            }}
-          >
-            <iframe
-              src="https://gcg3official.com/contact-us/"
-              className="w-full border-0 bg-white"
-              style={{ minHeight: 600, display: 'block' }}
-              title="Contact Form"
-              loading="lazy"
-            />
-          </div>
+          <ContactForm />
         </div>
       </section>
     </>
