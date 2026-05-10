@@ -6,19 +6,19 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { label: 'Home',     href: '/' },
+  { label: 'Home', href: '/' },
   { label: 'Programs', href: '/programs' },
-  { label: 'Events',   href: '/events' },
-  { label: 'About',    href: '/about' },
-  { label: 'Contact',  href: '/contact' },
+  { label: 'Events', href: '/events' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
-const EASING   = 'cubic-bezier(0.4, 0, 0.2, 1)';
+const EASING = 'cubic-bezier(0.4, 0, 0.2, 1)';
 const DURATION = '450ms';
 
 export default function Navbar() {
-  const [scrolled,  setScrolled]  = useState(false);
-  const [menuOpen,  setMenuOpen]  = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -41,8 +41,8 @@ export default function Navbar() {
       <header
         className="fixed top-0 left-0 right-0 z-50 flex justify-center"
         style={{
-          paddingTop:   scrolled ? '12px' : '0',
-          paddingLeft:  scrolled ? '16px' : '0',
+          paddingTop: scrolled ? '12px' : '0',
+          paddingLeft: scrolled ? '16px' : '0',
           paddingRight: scrolled ? '16px' : '0',
           transition: `padding ${DURATION} ${EASING}`,
         }}
@@ -50,15 +50,15 @@ export default function Navbar() {
         <div
           className="w-full flex items-center justify-between"
           style={{
-            maxWidth:     scrolled ? '1100px' : '100%',
-            height:       scrolled ? '60px' : '80px',
-            paddingLeft:  scrolled ? '20px' : 'clamp(20px, 4vw, 56px)',
+            maxWidth: scrolled ? '1100px' : '100%',
+            height: scrolled ? '60px' : '80px',
+            paddingLeft: scrolled ? '20px' : 'clamp(20px, 4vw, 56px)',
             paddingRight: scrolled ? '20px' : 'clamp(20px, 4vw, 56px)',
             borderRadius: scrolled ? '9999px' : '0',
-            background:   scrolled
+            background: scrolled
               ? 'rgba(13,18,64,0.96)'
               : 'transparent',
-            backdropFilter:      scrolled ? 'blur(24px) saturate(180%)' : 'none',
+            backdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'none',
             WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'none',
             border: scrolled
               ? '1px solid rgba(236,233,76,0.10)'
@@ -79,8 +79,8 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0" aria-label="GCG3 Home">
-            <div className="relative flex-shrink-0" style={{ width: scrolled ? 50 : 80, height: scrolled ? 32 : 50, transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}` }}>
-              <Image src="https://gcg3official.com/wp-content/uploads/2021/04/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-cover" unoptimized />
+            <div className="relative flex-shrink-0" style={{ width: scrolled ? 40 : 64, height: scrolled ? 26 : 40, transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}` }}>
+              <Image src="/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-contain" unoptimized />
             </div>
           </Link>
 
@@ -161,8 +161,8 @@ export default function Navbar() {
         {/* Top bar */}
         <div className="flex items-center justify-between px-5 flex-shrink-0" style={{ height: 60 }}>
           <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <div className="relative w-20 h-12">
-              <Image src="https://gcg3official.com/wp-content/uploads/2021/04/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-cover" unoptimized />
+            <div className="relative w-16 h-10">
+              <Image src="/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-contain" unoptimized />
             </div>
           </Link>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="w-9 h-9 flex items-center justify-center relative">

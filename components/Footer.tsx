@@ -8,43 +8,43 @@ const groups = [
   {
     title: 'Navigate',
     links: [
-      { label: 'Home',     href: '/' },
+      { label: 'Home', href: '/' },
       { label: 'Programs', href: '/programs' },
-      { label: 'Events',   href: '/events' },
-      { label: 'About',    href: '/about' },
-      { label: 'Contact',  href: '/contact' },
+      { label: 'Events', href: '/events' },
+      { label: 'About', href: '/about' },
+      { label: 'Contact', href: '/contact' },
     ],
   },
   {
     title: 'Programs',
     links: [
-      { label: 'Talent Show',        href: '/events/gcg3-christian-musical-talent-show' },
-      { label: 'Teens Mentorship',   href: '/events/gcg3-teen-mentorship-program' },
-      { label: 'Leadership',         href: '/events/teen-leadership-program' },
-      { label: 'Reading Club',       href: '/events/reading-club' },
+      { label: 'Talent Show', href: '/events/gcg3-christian-musical-talent-show' },
+      { label: 'Teens Mentorship', href: '/events/gcg3-teen-mentorship-program' },
+      { label: 'Leadership', href: '/events/teen-leadership-program' },
+      { label: 'Reading Club', href: '/events/reading-club' },
     ],
   },
   {
     title: 'Community',
     links: [
-      { label: 'Facebook',  href: 'https://www.facebook.com/gcg3official' },
+      { label: 'Facebook', href: 'https://www.facebook.com/gcg3official' },
       { label: 'Instagram', href: 'https://www.instagram.com/gcg3official' },
-      { label: 'YouTube',   href: 'https://youtube.com/@gcg3official' },
+      { label: 'YouTube', href: 'https://youtube.com/@gcg3official' },
     ],
   },
   {
     title: 'Contact',
     links: [
-      { label: '416-858-4455',           href: 'tel:4168584455' },
+      { label: '416-858-4455', href: 'tel:4168584455' },
       { label: 'gcg3official@gmail.com', href: 'mailto:gcg3official@gmail.com' },
       { label: 'Suite 201a, 7581 Jane St', href: '#' },
-      { label: 'Ontario, Canada',         href: '#' },
+      { label: 'Ontario, Canada', href: '#' },
     ],
   },
 ];
 
 export default function Footer() {
-  const [email, setEmail]       = useState('');
+  const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   return (
@@ -88,12 +88,12 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-3 mb-10 group w-fit">
-              <div className="relative w-24 h-16 flex-shrink-0">
+              <div className="relative w-20 h-12 flex-shrink-0">
                 <Image
-                  src="https://gcg3official.com/wp-content/uploads/2021/04/GCG3-New-Site-Logo.gif"
+                  src="/GCG3-New-Site-Logo.gif"
                   alt="GCG3"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   unoptimized
                 />
               </div>
