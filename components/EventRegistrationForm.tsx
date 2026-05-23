@@ -133,7 +133,7 @@ export default function EventRegistrationForm({ eventName }: { eventName: string
           {serverMessage}
         </p>
         <p className="font-body" style={{ color: 'rgba(236,233,76,0.85)', fontSize: 13, lineHeight: 1.6 }}>
-          Remember to send your e-transfer to <strong>gcg3official@gmail.com</strong> with your child&apos;s name in the notes.
+          We&apos;ll be in touch with next steps and any payment details if required.
         </p>
       </div>
     );

@@ -199,22 +199,7 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
 
               </div>
 
-              <section
-                style={{
-                  borderRadius: 12,
-                  background: 'rgba(34,43,100,0.18)',
-                  border: '1px solid rgba(236,233,76,0.25)',
-                  padding: '14px 16px',
-                  marginBottom: 18,
-                }}
-              >
-                <p className="font-heading" style={{ color: '#ece94c', fontSize: 14, fontWeight: 600, lineHeight: 1.4 }}>
-                  Payment Option:
-                </p>
-                <p className="font-body" style={{ color: '#f2f0fc', fontSize: 14, lineHeight: 1.6 }}>
-                  Please send an e-transfer to <strong>gcg3official@gmail.com</strong>. When sending the payment, include your child&apos;s name in the transfer notes.
-                </p>
-              </section>
+              {/* payment banner removed — events are handled as free or via registration flow */}
 
               {!isPast ? (
                 <section id="registration-form" style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.14)', background: 'rgba(255,255,255,0.05)' }}>
@@ -238,9 +223,7 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                         <line x1="12" y1="8" x2="12" y2="12"/>
                         <line x1="12" y1="16" x2="12.01" y2="16"/>
                       </svg>
-                      <p className="font-body" style={{ color: 'rgba(242,240,252,0.65)', fontSize: 14, lineHeight: 1.6 }}>
-                        After submitting, send your e-transfer to <strong style={{ color: '#ece94c' }}>gcg3official@gmail.com</strong> and include your child&apos;s name in the notes.
-                      </p>
+                      {/* e-transfer instructions removed — registration is free or handled separately */}
                     </div>
                     <EventRegistrationForm eventName={titleText} />
                   </div>

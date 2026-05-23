@@ -70,7 +70,13 @@ export function getEventPrice(event: WPEvent): string | null {
   }
   if (html.toLowerCase().includes('free')) return 'Free';
   const match = html.match(/\$[\d,]+/);
-  return match ? match[0] : null;
+  if (match) {
+    // If the price is $30 (or other amounts we want to override), treat as Free
+    const amount = match[0].replace(/[^\d]/g, '');
+    if (amount === '30') return 'Free';
+    return match[0];
+  }
+  return null;
 }
 
 export function getEventDate(event: WPEvent): string | null {
