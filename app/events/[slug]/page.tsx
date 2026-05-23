@@ -207,24 +207,28 @@ export default async function EventDetailPage({ params }: { params: { slug: stri
                     Registration
                   </div>
                   <div style={{ padding: '20px 18px', display: 'flex', flexDirection: 'column', gap: 16 }}>
-                    <div
-                      style={{
-                        borderRadius: 8,
-                        background: 'rgba(236,233,76,0.06)',
-                        border: '1px solid rgba(236,233,76,0.18)',
-                        padding: '12px 14px',
-                        display: 'flex',
-                        gap: 10,
-                        alignItems: 'flex-start',
-                      }}
-                    >
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" strokeWidth="2" stroke="#ece94c" style={{ flexShrink: 0, marginTop: 2 }}>
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="12" y1="8" x2="12" y2="12"/>
-                        <line x1="12" y1="16" x2="12.01" y2="16"/>
-                      </svg>
-                      {/* e-transfer instructions removed — registration is free or handled separately */}
-                    </div>
+                    {price && price.toLowerCase() !== 'free' && (
+                      <div
+                        style={{
+                          borderRadius: 8,
+                          background: 'rgba(236,233,76,0.06)',
+                          border: '1px solid rgba(236,233,76,0.18)',
+                          padding: '12px 14px',
+                          display: 'flex',
+                          gap: 10,
+                          alignItems: 'flex-start',
+                        }}
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" strokeWidth="2" stroke="#ece94c" style={{ flexShrink: 0, marginTop: 2 }}>
+                          <circle cx="12" cy="12" r="10"/>
+                          <line x1="12" y1="8" x2="12" y2="12"/>
+                          <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        <p className="font-body" style={{ color: 'rgba(242,240,252,0.65)', fontSize: 14, lineHeight: 1.6 }}>
+                          This event requires payment: {price}. After submitting, please follow the payment instructions provided.
+                        </p>
+                      </div>
+                    )}
                     <EventRegistrationForm eventName={titleText} />
                   </div>
                 </section>
