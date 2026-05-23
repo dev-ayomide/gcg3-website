@@ -79,8 +79,34 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0" aria-label="GCG3 Home">
-            <div className="relative flex-shrink-0" style={{ width: scrolled ? 40 : 64, height: scrolled ? 26 : 40, transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}` }}>
-              <Image src="/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-contain" unoptimized />
+            <div
+              className="relative flex-shrink-0"
+              style={{
+                width: scrolled ? 52 : 72,
+                height: scrolled ? 52 : 72,
+                transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}`,
+              }}
+            >
+              <div
+                aria-hidden
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  borderRadius: 8,
+                  background: 'radial-gradient(circle at 30% 30%, rgba(236,233,76,0.12), rgba(8,9,14,0) 45%)',
+                  filter: 'blur(8px)',
+                  zIndex: 0,
+                  pointerEvents: 'none',
+                }}
+              />
+              <Image
+                src="/GCG3-logo.png"
+                alt="GCG3 logo"
+                fill
+                className="object-contain"
+                priority={true}
+                style={{ filter: 'drop-shadow(0 6px 18px rgba(0,0,0,0.45))', zIndex: 1 }}
+              />
             </div>
           </Link>
 
@@ -161,8 +187,14 @@ export default function Navbar() {
         {/* Top bar */}
         <div className="flex items-center justify-between px-5 flex-shrink-0" style={{ height: 60 }}>
           <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <div className="relative w-16 h-10">
-              <Image src="/GCG3-New-Site-Logo.gif" alt="GCG3" fill className="object-contain" unoptimized />
+            <div className="relative" style={{ width: 44, height: 44 }}>
+              <Image
+                src="/GCG3-logo.png"
+                alt="GCG3 logo"
+                fill
+                className="object-contain"
+                style={{ filter: 'drop-shadow(0 6px 14px rgba(0,0,0,0.35))' }}
+              />
             </div>
           </Link>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="w-9 h-9 flex items-center justify-center relative">

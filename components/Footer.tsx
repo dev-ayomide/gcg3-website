@@ -88,13 +88,28 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-3 mb-10 group w-fit">
-              <div className="relative w-20 h-12 flex-shrink-0">
+              <div
+                className="relative flex-shrink-0"
+                style={{ width: 84, height: 84 }}
+              >
+                <div
+                  aria-hidden
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    borderRadius: 10,
+                    background: 'radial-gradient(circle at 30% 30%, rgba(236,233,76,0.12), rgba(8,9,14,0) 45%)',
+                    filter: 'blur(10px)',
+                    zIndex: 0,
+                    pointerEvents: 'none',
+                  }}
+                />
                 <Image
-                  src="/GCG3-New-Site-Logo.gif"
-                  alt="GCG3"
+                  src="/GCG3-logo.png"
+                  alt="GCG3 logo"
                   fill
                   className="object-contain"
-                  unoptimized
+                  style={{ filter: 'drop-shadow(0 6px 18px rgba(0,0,0,0.45))', zIndex: 1 }}
                 />
               </div>
             </Link>

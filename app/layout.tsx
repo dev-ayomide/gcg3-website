@@ -13,6 +13,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'GCG3 — God\'s Children Got Great Gifts',
   description: 'A platform where young children can fully express their individual talents. Faith · Talent · Community.',
+  icons: {
+    icon: '/GCG3-logo.png',
+    apple: '/GCG3-logo.png',
+  },
   openGraph: {
     title: 'GCG3 — God\'s Children Got Great Gifts',
     description: 'Helping children discover, develop, and celebrate the talents God placed in them.',

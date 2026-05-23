@@ -2,14 +2,23 @@ import { WPEvent, WPPage } from '@/types/wp';
 
 const WP_BASE = `${process.env.NEXT_PUBLIC_WP_URL ?? 'https://gcg3official.com'}/wp-json/wp/v2`;
 
+// Vercel WAF on gcg3official.com blocks requests without a browser-like User-Agent (returns 403).
+const FETCH_HEADERS = {
+  'User-Agent':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  Accept: 'application/json',
+};
+
 export async function getEvents(): Promise<WPEvent[]> {
   try {
     const res = await fetch(`${WP_BASE}/events?per_page=20&_embed`, {
+      headers: FETCH_HEADERS,
       next: { revalidate: 3600 },
     });
-    if (!res.ok) throw new Error('Failed to fetch events');
+    if (!res.ok) throw new Error(`Failed to fetch events: ${res.status}`);
     return res.json();
-  } catch {
+  } catch (err) {
+    console.error('[wordpress] getEvents error:', err);
     return [];
   }
 }
@@ -17,12 +26,14 @@ export async function getEvents(): Promise<WPEvent[]> {
 export async function getEvent(slug: string): Promise<WPEvent | null> {
   try {
     const res = await fetch(`${WP_BASE}/events?slug=${slug}&_embed`, {
+      headers: FETCH_HEADERS,
       next: { revalidate: 3600 },
     });
-    if (!res.ok) throw new Error('Failed to fetch event');
+    if (!res.ok) throw new Error(`Failed to fetch event: ${res.status}`);
     const events: WPEvent[] = await res.json();
     return events[0] ?? null;
-  } catch {
+  } catch (err) {
+    console.error('[wordpress] getEvent error:', err);
     return null;
   }
 }
@@ -30,12 +41,14 @@ export async function getEvent(slug: string): Promise<WPEvent | null> {
 export async function getPage(slug: string): Promise<WPPage | null> {
   try {
     const res = await fetch(`${WP_BASE}/pages?slug=${slug}&_embed`, {
+      headers: FETCH_HEADERS,
       next: { revalidate: 86400 },
     });
-    if (!res.ok) throw new Error('Failed to fetch page');
+    if (!res.ok) throw new Error(`Failed to fetch page: ${res.status}`);
     const pages: WPPage[] = await res.json();
     return pages[0] ?? null;
-  } catch {
+  } catch (err) {
+    console.error('[wordpress] getPage error:', err);
     return null;
   }
 }
