@@ -56,15 +56,15 @@ export default function Navbar() {
             paddingRight: scrolled ? '20px' : 'clamp(20px, 4vw, 56px)',
             borderRadius: scrolled ? '9999px' : '0',
             background: scrolled
-              ? 'rgba(13,18,64,0.96)'
+              ? 'rgba(255, 255, 255, 0.95)'
               : 'transparent',
-            backdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'none',
-            WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'none',
+            backdropFilter: scrolled ? 'blur(20px) saturate(160%)' : 'none',
+            WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(160%)' : 'none',
             border: scrolled
-              ? '1px solid rgba(236,233,76,0.10)'
+              ? '1px solid rgba(0, 0, 0, 0.08)'
               : '1px solid transparent',
             boxShadow: scrolled
-              ? '0 16px 56px rgba(0,0,0,0.60), 0 4px 16px rgba(0,0,0,0.30)'
+              ? '0 12px 40px rgba(0,0,0,0.12), 0 3px 12px rgba(0,0,0,0.08)'
               : 'none',
             transition: [
               `max-width ${DURATION} ${EASING}`,
@@ -82,30 +82,37 @@ export default function Navbar() {
             <div
               className="relative flex-shrink-0"
               style={{
-                width: scrolled ? 52 : 72,
-                height: scrolled ? 52 : 72,
+                width: scrolled ? 56 : 76,
+                height: scrolled ? 56 : 76,
                 transition: `width ${DURATION} ${EASING}, height ${DURATION} ${EASING}`,
               }}
             >
+              {/* Glow effect background */}
               <div
                 aria-hidden
                 style={{
                   position: 'absolute',
-                  inset: 0,
-                  borderRadius: 8,
-                  background: 'radial-gradient(circle at 30% 30%, rgba(236,233,76,0.12), rgba(8,9,14,0) 45%)',
-                  filter: 'blur(8px)',
+                  inset: -12,
+                  borderRadius: '50%',
+                  background: 'radial-gradient(circle at 40% 40%, rgba(236,233,76,0.45), rgba(236,233,76,0.20), rgba(236,233,76,0.05), transparent 75%)',
+                  filter: 'blur(14px)',
                   zIndex: 0,
                   pointerEvents: 'none',
+                  transition: `all ${DURATION} ${EASING}`,
                 }}
               />
+              {/* Logo Image */}
               <Image
                 src="/GCG3-logo.png"
                 alt="GCG3 logo"
                 fill
                 className="object-contain"
                 priority={true}
-                style={{ filter: 'drop-shadow(0 6px 18px rgba(0,0,0,0.45))', zIndex: 1 }}
+                style={{
+                  filter: 'brightness(1.12) drop-shadow(0 6px 16px rgba(0,0,0,0.50))',
+                  zIndex: 1,
+                  transition: `filter ${DURATION} ${EASING}`,
+                }}
               />
             </div>
           </Link>
@@ -124,10 +131,10 @@ export default function Navbar() {
                     fontSize: 12,
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
-                    color: active ? '#ece94c' : 'rgba(242,240,252,0.55)',
+                    color: active ? '#ece94c' : 'rgba(0, 0, 0, 0.55)',
                   }}
-                  onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(242,240,252,0.95)'; }}
-                  onMouseLeave={(e) => { if (!active) (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(242,240,252,0.55)'; }}
+                  onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(0, 0, 0, 0.80)'; }}
+                  onMouseLeave={(e) => { if (!active) (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(0, 0, 0, 0.48)'; }}
                 >
                   {link.label}
                   {active && (
@@ -164,9 +171,9 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             className="md:hidden flex flex-col justify-center items-end gap-[5px] w-9 h-9 z-[110] relative flex-shrink-0"
           >
-            <span className="block h-px bg-text" style={{ width: 22, transform: menuOpen ? 'rotate(45deg) translate(0px, 5.5px)' : 'none', transition: `transform 0.3s ${EASING}` }} />
-            <span className="block h-px bg-text" style={{ width: 16, opacity: menuOpen ? 0 : 1, transition: 'opacity 0.2s' }} />
-            <span className="block h-px bg-text" style={{ width: 22, transform: menuOpen ? 'rotate(-45deg) translate(0px, -5.5px)' : 'none', transition: `transform 0.3s ${EASING}` }} />
+            <span className="block h-px" style={{ width: 22, background: 'rgba(0, 0, 0, 0.80)', transform: menuOpen ? 'rotate(45deg) translate(0px, 5.5px)' : 'none', transition: `transform 0.3s ${EASING}` }} />
+            <span className="block h-px" style={{ width: 16, background: 'rgba(0, 0, 0, 0.80)', opacity: menuOpen ? 0 : 1, transition: 'opacity 0.2s' }} />
+            <span className="block h-px" style={{ width: 22, background: 'rgba(0, 0, 0, 0.80)', transform: menuOpen ? 'rotate(-45deg) translate(0px, -5.5px)' : 'none', transition: `transform 0.3s ${EASING}` }} />
           </button>
         </div>
       </header>
@@ -175,7 +182,7 @@ export default function Navbar() {
       <div
         className="fixed inset-0 z-[100] md:hidden flex flex-col"
         style={{
-          background: 'rgba(8,9,14,0.98)',
+          background: 'rgba(255, 255, 255, 0.98)',
           backdropFilter: 'blur(24px)',
           WebkitBackdropFilter: 'blur(24px)',
           opacity: menuOpen ? 1 : 0,
@@ -187,19 +194,35 @@ export default function Navbar() {
         {/* Top bar */}
         <div className="flex items-center justify-between px-5 flex-shrink-0" style={{ height: 60 }}>
           <Link href="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <div className="relative" style={{ width: 44, height: 44 }}>
+            <div className="relative" style={{ width: 54, height: 54 }}>
+              {/* Glow effect background */}
+              <div
+                aria-hidden
+                style={{
+                  position: 'absolute',
+                  inset: -12,
+                  borderRadius: '50%',
+                  background: 'radial-gradient(circle at 40% 40%, rgba(236,233,76,0.45), rgba(236,233,76,0.20), rgba(236,233,76,0.05), transparent 75%)',
+                  filter: 'blur(14px)',
+                  zIndex: 0,
+                  pointerEvents: 'none',
+                }}
+              />
               <Image
                 src="/GCG3-logo.png"
                 alt="GCG3 logo"
                 fill
                 className="object-contain"
-                style={{ filter: 'drop-shadow(0 6px 14px rgba(0,0,0,0.35))' }}
+                style={{
+                  filter: 'brightness(1.12) drop-shadow(0 6px 16px rgba(0,0,0,0.50))',
+                  zIndex: 1,
+                }}
               />
             </div>
           </Link>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="w-9 h-9 flex items-center justify-center relative">
-            <span className="absolute block w-5 h-px bg-text" style={{ transform: 'rotate(45deg)' }} />
-            <span className="absolute block w-5 h-px bg-text" style={{ transform: 'rotate(-45deg)' }} />
+            <span className="absolute block w-5 h-px" style={{ background: 'rgba(0, 0, 0, 0.80)', transform: 'rotate(45deg)' }} />
+            <span className="absolute block w-5 h-px" style={{ background: 'rgba(0, 0, 0, 0.80)', transform: 'rotate(-45deg)' }} />
           </button>
         </div>
 
@@ -212,11 +235,11 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="font-display italic font-light text-text hover:text-accent transition-colors block"
+                className="font-display italic font-light hover:text-accent transition-colors block"
                 style={{
                   fontSize: 'clamp(2rem, 8vw, 3rem)',
                   lineHeight: 1.1,
-                  color: active ? '#ece94c' : undefined,
+                  color: active ? '#ece94c' : 'rgba(0, 0, 0, 0.80)',
                   opacity: menuOpen ? 1 : 0,
                   transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
                   transition: `opacity 0.45s ${EASING} ${0.08 + i * 0.05}s, transform 0.45s ${EASING} ${0.08 + i * 0.05}s`,
@@ -243,12 +266,12 @@ export default function Navbar() {
         {/* Contact strip */}
         <div
           className="px-8 pb-10 border-t"
-          style={{ borderTopColor: 'rgba(242,240,252,0.06)', paddingTop: 20, opacity: menuOpen ? 1 : 0, transition: `opacity 0.45s ${EASING} 0.44s` }}
+          style={{ borderTopColor: 'rgba(0, 0, 0, 0.08)', paddingTop: 20, opacity: menuOpen ? 1 : 0, transition: `opacity 0.45s ${EASING} 0.44s` }}
         >
-          <a href="mailto:gcg3official@gmail.com" className="font-syne text-muted hover:text-accent transition-colors block" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+          <a href="mailto:gcg3official@gmail.com" className="font-syne hover:text-accent transition-colors block" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0, 0, 0, 0.55)' }}>
             gcg3official@gmail.com
           </a>
-          <a href="tel:4168584455" className="font-syne text-muted hover:text-accent transition-colors block mt-1.5" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+          <a href="tel:4168584455" className="font-syne hover:text-accent transition-colors block mt-1.5" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0, 0, 0, 0.55)' }}>
             416-858-4455
           </a>
         </div>
