@@ -19,7 +19,7 @@ const programs = [
     tag: 'Ages 12–17',
     description: 'Boot camp, mentoring, and peer community for teenagers finding their identity in Christ.',
     href: '/events/gcg3-teen-mentorship-program',
-    image: 'https://gcg3official.com/wp-content/uploads/2023/09/GCG3-small-1.png',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2023/09/GCG3-small-1.png',
     featured: false,
   },
   {
@@ -27,7 +27,7 @@ const programs = [
     tag: 'Ages 10–17',
     description: 'Self-leadership, emotional intelligence, and real-world skills.',
     href: '/events/teen-leadership-program',
-    image: 'https://gcg3official.com/wp-content/uploads/2021/06/14BE131A-B03B-470E-9A80-030B4D5354C9.png',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2021/06/14BE131A-B03B-470E-9A80-030B4D5354C9.png',
     featured: false,
   },
   {
@@ -35,7 +35,7 @@ const programs = [
     tag: 'All Ages',
     description: 'Zoom-based book discussions that expand minds and build a love of learning.',
     href: '/events/reading-club',
-    image: 'https://gcg3official.com/wp-content/uploads/2021/04/pexels-mael-balland-3457273.jpg',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2021/04/pexels-mael-balland-3457273.jpg',
     featured: false,
   },
 ];

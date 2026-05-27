@@ -11,7 +11,7 @@ const programs = [
     number: '01',
     title: 'Christian Musical Talent Show',
     ages: 'Ages 9-15',
-    image: 'https://gcg3official.com/wp-content/uploads/2025/10/GCG3_talent_show.png',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2025/10/GCG3_talent_show.png',
     description:
       'The flagship GCG3 event - a stage for young performers to showcase God-given talents. Singing, dancing, spoken word, acting. Grand prize: $3,000.',
     href: '/events/gcg3-christian-musical-talent-show',
@@ -22,7 +22,7 @@ const programs = [
     number: '02',
     title: 'Teens Mentorship Program',
     ages: 'Ages 12-17',
-    image: 'https://gcg3official.com/wp-content/uploads/2023/09/GCG3-small-1.png',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2023/09/GCG3-small-1.png',
     description:
       'Build strong relationships with mentors and peers while developing character, confidence, and God-given purpose. This program walks alongside teens through the critical years of identity formation.',
     href: '/events/gcg3-teen-mentorship-program',
@@ -33,7 +33,7 @@ const programs = [
     number: '03',
     title: 'Teens Leadership Program',
     ages: 'Ages 10-17',
-    image: 'https://gcg3official.com/wp-content/uploads/2021/06/14BE131A-B03B-470E-9A80-030B4D5354C9.png',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2021/06/14BE131A-B03B-470E-9A80-030B4D5354C9.png',
     description:
       'Developing self-leadership, intrapersonal intelligence, and self-awareness in young people. Equipping teens to lead themselves before leading others.',
     href: '/events/teen-leadership-program',
@@ -44,7 +44,7 @@ const programs = [
     number: '04',
     title: 'Reading Club',
     ages: 'All ages',
-    image: 'https://gcg3official.com/wp-content/uploads/2021/04/pexels-mael-balland-3457273.jpg',
+    image: 'https://cms.gcg3official.com/wp-content/uploads/2021/04/pexels-mael-balland-3457273.jpg',
     description:
       'Holistic growth through books across genres. Zoom-based discussions that expand young minds and build a love for reading and critical thinking.',
     href: '/events/reading-club',
