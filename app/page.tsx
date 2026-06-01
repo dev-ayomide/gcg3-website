@@ -8,11 +8,11 @@ import { getUpcomingEvents } from '@/lib/wordpress';
 
 /* ── Gallery photos ── */
 const galleryPhotos = [
-  { src: 'https://cms.gcg3official.com/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-20-at-03.14.50.jpeg', alt: 'GCG3 performers on stage', w: 300, h: 420 },
-  { src: 'https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0063.jpg', alt: 'GCG3 2024 talent show',    w: 400, h: 280 },
-  { src: 'https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0064.jpg', alt: 'GCG3 community',           w: 290, h: 400 },
-  { src: 'https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0065.jpg', alt: 'GCG3 mentorship',          w: 360, h: 260 },
-  { src: 'https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0066.jpg', alt: 'GCG3 on stage',            w: 290, h: 420 },
+  { src: '/gcg3-winner-check.jpeg',      alt: 'GCG3 winner receiving $3,000 prize check', w: 300, h: 420 },
+  { src: '/gcg3-host-stage.jpeg',        alt: 'GCG3 host on stage',                        w: 400, h: 280 },
+  { src: '/gcg3-contestants-stage.jpeg', alt: 'GCG3 contestants on stage',                 w: 290, h: 400 },
+  { src: '/gcg3-mc-stage.jpeg',          alt: 'GCG3 MC presenting on stage',               w: 360, h: 260 },
+  { src: '/gcg3-audience.jpeg',          alt: 'GCG3 audience at talent show',              w: 290, h: 420 },
 ];
 
 
@@ -115,8 +115,8 @@ export default async function HomePage() {
                 }}
               >
                 <Image
-                  src="https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0066.jpg"
-                  alt="GCG3 community performing on stage"
+                  src="/gcg3-host-stage.jpeg"
+                  alt="GCG3 host on stage"
                   fill
                   className="object-cover object-center"
                 />
@@ -195,8 +195,8 @@ export default async function HomePage() {
                   }}
                 >
                   <Image
-                    src="https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0063.jpg"
-                    alt="GCG3 2024 talent show"
+                    src="/gcg3-contestants-stage.jpeg"
+                    alt="GCG3 contestants on stage"
                     fill
                     className="object-cover"
                   />
@@ -213,8 +213,8 @@ export default async function HomePage() {
                   }}
                 >
                   <Image
-                    src="https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0065.jpg"
-                    alt="GCG3 community"
+                    src="/gcg3-mc-stage.jpeg"
+                    alt="GCG3 MC presenting on stage"
                     fill
                     className="object-cover"
                   />

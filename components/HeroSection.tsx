@@ -44,7 +44,7 @@ export default function HeroSection() {
         style={{ zIndex: 0, willChange: 'transform', transform: 'scale(1.14) translateY(0px)' }}
       >
         <Image
-          src="https://cms.gcg3official.com/wp-content/uploads/2024/04/IMG-20240402-WA0063.jpg"
+          src="/gcg3-winner-check.jpeg"
           alt=""
           fill
           priority
