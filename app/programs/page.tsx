@@ -11,11 +11,11 @@ const programs = [
     number: '01',
     title: 'Christian Musical Talent Show',
     ages: 'Ages 9-15',
-    image: 'https://cms.gcg3official.com/wp-content/uploads/2025/10/GCG3_talent_show.png',
+    image: '/gcg3-grand-finale-flyer.png',
     description:
       'The flagship GCG3 event - a stage for young performers to showcase God-given talents. Singing, dancing, spoken word, acting. Grand prize: $3,000.',
     href: '/events/gcg3-christian-musical-talent-show',
-    highlights: ['Live performance', 'Multiple categories', 'Grand prize $3,000', 'Annual event'],
+    highlights: ['Grand Finale · Aug 23, 2026', 'Live performance', 'Grand prize $3,000', 'Free entry — register'],
     featured: true,
   },
   {

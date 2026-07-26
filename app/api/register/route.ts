@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const WP_BASE = process.env.NEXT_PUBLIC_WP_URL ?? 'https://gcg3official.com';
+const WP_BASE = process.env.NEXT_PUBLIC_WP_URL ?? 'https://cms.gcg3official.com';
 const FORM_ID = process.env.CF7_REGISTRATION_FORM_ID ?? '2';
 
 export async function POST(req: NextRequest) {

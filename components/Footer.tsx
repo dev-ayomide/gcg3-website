@@ -18,7 +18,7 @@ const groups = [
   {
     title: 'Programs',
     links: [
-      { label: 'Talent Show', href: '/events/gcg3-christian-musical-talent-show' },
+      { label: 'Talent Show Grand Finale', href: '/events/gcg3-christian-musical-talent-show' },
       { label: 'Teens Mentorship', href: '/events/gcg3-teen-mentorship-program' },
       { label: 'Leadership', href: '/events/teen-leadership-program' },
       { label: 'Reading Club', href: '/events/reading-club' },

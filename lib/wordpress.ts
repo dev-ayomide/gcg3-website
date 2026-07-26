@@ -1,6 +1,9 @@
 import { WPEvent, WPPage } from '@/types/wp';
+import { getEventOverride } from '@/lib/eventOverrides';
 
-const WP_BASE = `${process.env.NEXT_PUBLIC_WP_URL ?? 'https://gcg3official.com'}/wp-json/wp/v2`;
+// WordPress lives on the cms subdomain; the apex domain serves this Next app,
+// and its /wp-json path is blocked by the WAF.
+const WP_BASE = `${process.env.NEXT_PUBLIC_WP_URL ?? 'https://cms.gcg3official.com'}/wp-json/wp/v2`;
 
 // Vercel WAF on gcg3official.com blocks requests without a browser-like User-Agent (returns 403).
 const FETCH_HEADERS = {
@@ -9,6 +12,29 @@ const FETCH_HEADERS = {
   Accept: 'application/json',
 };
 
+// Fold any local override into the WP payload so every consumer (cards, listing,
+// detail page) reads the corrected title/flyer/date/location without special-casing.
+function applyOverride(event: WPEvent): WPEvent {
+  const override = getEventOverride(event.slug);
+  if (!override) return event;
+
+  return {
+    ...event,
+    title: { rendered: override.title },
+    content: { rendered: override.aboutHtml },
+    _embedded: {
+      ...event._embedded,
+      'wp:featuredmedia': [{ source_url: override.image, alt_text: override.title }],
+    },
+    acf: {
+      ...event.acf,
+      event_date: override.eventDate,
+      event_location: override.location,
+      event_price: override.price,
+    },
+  };
+}
+
 export async function getEvents(): Promise<WPEvent[]> {
   try {
     const res = await fetch(`${WP_BASE}/events?per_page=20&_embed`, {
@@ -16,7 +42,8 @@ export async function getEvents(): Promise<WPEvent[]> {
       next: { revalidate: 3600 },
     });
     if (!res.ok) throw new Error(`Failed to fetch events: ${res.status}`);
-    return res.json();
+    const events: WPEvent[] = await res.json();
+    return events.map(applyOverride);
   } catch (err) {
     console.error('[wordpress] getEvents error:', err);
     return [];
@@ -31,7 +58,7 @@ export async function getEvent(slug: string): Promise<WPEvent | null> {
     });
     if (!res.ok) throw new Error(`Failed to fetch event: ${res.status}`);
     const events: WPEvent[] = await res.json();
-    return events[0] ?? null;
+    return events[0] ? applyOverride(events[0]) : null;
   } catch (err) {
     console.error('[wordpress] getEvent error:', err);
     return null;
@@ -80,6 +107,10 @@ export function getEventPrice(event: WPEvent): string | null {
 }
 
 export function getEventDate(event: WPEvent): string | null {
+  // Overrides store a machine-readable date in acf for the past/upcoming check,
+  // so read the display string straight off the override.
+  const override = getEventOverride(event.slug);
+  if (override) return override.dateText;
   if (event.acf?.event_date) return event.acf.event_date;
   return null;
 }
@@ -164,6 +195,19 @@ export type EventPageData = {
 };
 
 export async function getEventPageData(event: WPEvent): Promise<EventPageData> {
+  // An overridden event is authoritative — skip the WP page scrape entirely so the
+  // old flyer's audition date and "$30 (registration fee)" can't win on the detail page.
+  const override = getEventOverride(event.slug);
+  if (override) {
+    return {
+      formHtml: null,
+      dateText: override.dateText,
+      locationText: override.location,
+      registrationFeeText: override.price,
+      aboutText: null,
+    };
+  }
+
   try {
     const pageUrl = event.acf?.registration_link || event.link;
     if (!pageUrl) {

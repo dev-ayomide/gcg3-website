@@ -7,11 +7,10 @@ import { useEffect, useRef } from 'react';
 const programs = [
   {
     title: 'Christian Musical Talent Show',
-    tag: 'Flagship · Ages 9–15',
+    tag: 'Grand Finale · Ages 9–15',
     description: 'The signature GCG3 stage — singing, dancing, spoken word, acting. Grand prize: $3,000.',
     href: '/events/gcg3-christian-musical-talent-show',
-    // image: 'https://gcg3official.com/wp-content/uploads/2025/10/GCG3_talent_show.png',
-    image: 'https://cms.gcg3official.com/wp-content/uploads/2026/05/GCG3-1.png',
+    image: '/gcg3-grand-finale-flyer.png',
     featured: true,
   },
   {
